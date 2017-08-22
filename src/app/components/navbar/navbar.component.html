@@ -1,21 +1,22 @@
 <md-toolbar color="primary">
   <!--Logo-->
-  <md-icon svgIcon="logo" class="logo"></md-icon>
+  <md-icon svgIcon="logo" class="logo" routerLink=""></md-icon>
   <!--Music services-->
   <button *ngFor="let service of services" md-button>
-    {{ service.title }}
+    {{ service.title | uppercase }}
   </button>
   <!--Separator-->
   <div class="flex-spacer"></div>
+
   <!--Settings-->
   <button md-icon-button [mdMenuTriggerFor]="settings">
     <md-icon svgIcon="settings"></md-icon>
   </button>
   <!--Settings menu-->
   <md-menu #settings="mdMenu">
-    <button md-menu-item>
+    <a md-menu-item routerLink="settings">
       Settings
-    </button>
+    </a>
     <button md-menu-item>
       Logout
     </button>
