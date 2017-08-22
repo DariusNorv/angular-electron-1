@@ -1,0 +1,12 @@
+<md-toolbar color="primary">
+
+  <md-icon svgIcon="logo" class="logo"></md-icon>
+
+  <button *ngFor="let service of services" md-button>
+    {{ service.title }}
+  </button>
+
+  <div class="flex-spacer"></div>
+
+  <button md-icon-button><md-icon svgIcon="settings"></md-icon></button>
+</md-toolbar>
