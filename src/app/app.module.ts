@@ -12,7 +12,7 @@ import { ElectronService } from './providers/electron.service';
 
 // Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdIconModule, MdButtonModule, MdToolbarModule } from '@angular/material';
+import { MdMenuModule, MdIconModule, MdButtonModule, MdToolbarModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -33,6 +33,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     MdToolbarModule,
     MdButtonModule,
     MdIconModule,
+    MdMenuModule,
   ],
   providers: [ElectronService],
   bootstrap: [AppComponent]
