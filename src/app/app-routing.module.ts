@@ -1,7 +1,10 @@
-import { HomeComponent } from './components/home/home.component';
-import { SettingsComponent } from './components/settings/settings.component'
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
+import { HomeComponent } from './components/home/home.component';
+import { SettingsComponent } from './components/settings/settings.component';
+import { SoundcloudComponent } from './components/soundcloud/soundcloud.component';
+import { MixcloudComponent } from './components/mixcloud/mixcloud.component';
 
 const routes: Routes = [
   {
@@ -11,6 +14,14 @@ const routes: Routes = [
   {
     path: 'settings',
     component: SettingsComponent,
+  },
+  {
+    path: 'soundcloud',
+    component: SoundcloudComponent,
+  },
+  {
+    path: 'mixcloud',
+    component: MixcloudComponent,
   }
 ];
 
