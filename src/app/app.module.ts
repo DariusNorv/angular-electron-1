@@ -12,17 +12,30 @@ import { ElectronService } from './providers/electron.service';
 
 // Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdMenuModule, MdIconModule, MdButtonModule, MdToolbarModule } from '@angular/material';
+import {
+  MdGridListModule,
+  MdCardModule,
+  MdMenuModule,
+  MdIconModule,
+  MdButtonModule,
+  MdToolbarModule
+} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { SettingsComponent } from './components/settings/settings.component';
+import { SoundcloudComponent } from './components/soundcloud/soundcloud.component';
+import { MixcloudComponent } from './components/mixcloud/mixcloud.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    SettingsComponent,
+    SoundcloudComponent,
+    MixcloudComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +47,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     MdButtonModule,
     MdIconModule,
     MdMenuModule,
+    MdCardModule,
+    MdGridListModule,
   ],
   providers: [ElectronService],
   bootstrap: [AppComponent]

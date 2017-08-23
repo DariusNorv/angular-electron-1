@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MdIconRegistry } from '@angular/material';
+import { PROVIDERS } from '../../shared/providers';
 
 @Component({
   selector: 'app-navbar',
@@ -10,11 +11,8 @@ import { MdIconRegistry } from '@angular/material';
 
 export class NavbarComponent implements OnInit {
 
-  protected services: [object] = [{
-    title: 'SoundCloud'
-  }, {
-    title: 'MixCloud'
-  }];
+  providers = PROVIDERS;
+  show: boolean = false;
 
   constructor(iconRegistry: MdIconRegistry, sanitizer: DomSanitizer) {
     iconRegistry
