@@ -1,0 +1,53 @@
+%abs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+%clearPadding {
+  padding: 0;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.player {
+  position: relative;
+
+  .cover {
+    @extend %abs;
+
+    .img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: translateZ(0);
+    }
+
+    .play {
+      @extend %abs;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .mix {
+
+    .description {
+      width: 100%;
+      height: 100%;
+      padding-left: 1em;
+
+      .title {
+        @extend %clearPadding;
+        font-size: 1.6em;
+      }
+
+      .username {
+        @extend %clearPadding;
+        font-size: 1em;
+      }
+    }
+  }
+}

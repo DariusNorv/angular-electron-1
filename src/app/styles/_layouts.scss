@@ -6,6 +6,10 @@
     position: relative;
     width: 100%;
     display: block;
-    overflow: hidden;
+    overflow: auto;
   }
+}
+
+.container {
+  padding: 1rem;
 }

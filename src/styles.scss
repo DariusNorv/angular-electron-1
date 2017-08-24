@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-@import "app/mixins/layouts";
+@import "app/styles/layouts";
 
 html, body {
   margin: 0;
@@ -37,6 +37,15 @@ app {
       width: 100%;
       display: block;
       overflow: hidden;
+    }
+  }
+
+  &-content-player {
+    width: 100%;
+    display: block;
+
+    &:not(:last-child) {
+      padding-bottom: 1em;
     }
   }
 }

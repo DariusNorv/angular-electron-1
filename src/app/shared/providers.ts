@@ -8,14 +8,14 @@ interface ProviderModel {
 export const PROVIDERS: ProviderModel[] = [
   {
     id: 1,
-    title: 'SoundCloud',
-    url: 'soundcloud',
-    api: 'SoundcloudComponent',
+    title: 'Mixcloud',
+    url: 'mixcloud',
+    api: 'https://api.mixcloud.com/',
   },
   {
     id: 2,
-    title: 'Mixcloud',
-    url: 'mixcloud',
-    api: 'MixcloudComponent',
+    title: 'SoundCloud',
+    url: 'soundcloud',
+    api: 'SoundcloudComponent',
   },
 ];

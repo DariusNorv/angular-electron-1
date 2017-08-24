@@ -1,3 +1,7 @@
-<p>
-  mixcloud works!
-</p>
+<div class="container">
+  <app-content-player *ngFor="let item of data"
+                      [title]="item.name"
+                      [img]="item.pictures.medium || noImage"
+                      [user]="item.user.name">
+  </app-content-player>
+</div>

@@ -29,6 +29,7 @@ function createWindow(): void {
   // Open the DevTools.
   if (serve) {
     win.webContents.openDevTools();
+    // win.webContents.addDevToolsExtension('~/Library/Application\\ Support/Google/Chrome/Default/Extensions/');
   }
 
   // Emitted when the window is closed.
