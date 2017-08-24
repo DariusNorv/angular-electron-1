@@ -18,7 +18,8 @@ import {
   MdMenuModule,
   MdIconModule,
   MdButtonModule,
-  MdToolbarModule
+  MdToolbarModule,
+  MdListModule,
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -51,6 +52,7 @@ import { ContentPlayerComponent } from './components/content-player/content-play
     MdMenuModule,
     MdCardModule,
     MdGridListModule,
+    MdListModule,
   ],
   providers: [ElectronService],
   bootstrap: [AppComponent]

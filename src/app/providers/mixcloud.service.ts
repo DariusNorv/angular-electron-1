@@ -13,11 +13,10 @@ export class MixcloudService {
   constructor(private http: Http) {
   }
 
-  getNew(): Promise<any> {
+  getNew(url = 'popular/hot/'): Promise<any> {
     return this.http
-      .get(`${this.api}new`)
+      .get(`${this.api}${url}`)
       .toPromise()
       .then(res => res.json().data)
   }
-
 }

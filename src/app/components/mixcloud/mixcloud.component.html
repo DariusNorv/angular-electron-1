@@ -1,7 +1,26 @@
-<div class="container">
-  <app-content-player *ngFor="let item of data"
-                      [title]="item.name"
-                      [img]="item.pictures.medium || noImage"
-                      [user]="item.user.name">
-  </app-content-player>
+<div class="container flex">
+
+  <div class="sidebar">
+    <md-list>
+      <md-list-item
+        *ngFor="let item of sidebar; index as i;">
+        <button
+          md-button
+          class="selector"
+          [class.selected]="i === current"
+          (click)="changeStream(i)">
+          {{ item.name }}
+        </button>
+      </md-list-item>
+    </md-list>
+  </div>
+
+  <div class="content">
+    <app-content-player
+      *ngFor="let item of data"
+      [title]="item.name"
+      [img]="item.pictures.medium || noImage"
+      [user]="item.user.name">
+    </app-content-player>
+  </div>
 </div>

@@ -3,9 +3,10 @@
 
     <md-grid-tile [colspan]="1">
       <div class="cover">
-        <img [src]="img" class="img">
+        <img [src]="img"
+             onError="this.src = noImage"
+             class="img">
         <button md-icon-button
-                (click)="onClick"
                 class="play"
                 [hidden]="true">
           <md-icon svgIcon="play"></md-icon>
