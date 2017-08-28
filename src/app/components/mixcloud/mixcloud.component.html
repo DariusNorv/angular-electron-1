@@ -17,9 +17,11 @@
 
   <div class="content">
     <app-content-player
-      *ngFor="let item of data"
+      *ngFor="let item of data; index as i;"
       [title]="item.name"
       [img]="item.pictures.medium || noImage"
+      [key]="item.key"
+      [id]="i"
       [user]="item.user.name">
     </app-content-player>
   </div>

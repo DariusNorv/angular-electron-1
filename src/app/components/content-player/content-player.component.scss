@@ -14,6 +14,8 @@
 
 .player {
   position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
 
   .cover {
     @extend %abs;
@@ -37,10 +39,11 @@
     .description {
       width: 100%;
       height: 100%;
-      padding-left: 1em;
+      margin: 1em;
 
       .title {
         @extend %clearPadding;
+        margin-top: 1em;
         font-size: 1.4em;
       }
 
@@ -50,4 +53,15 @@
       }
     }
   }
+}
+
+md-grid-tile {
+  margin: -24px;
+}
+
+.mixcloud-iframe {
+  //position: fixed;
+  //visibility: hidden;
+  //top: -10000%;
+  display: none;
 }
