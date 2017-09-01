@@ -22,6 +22,7 @@ import {
   MdListModule,
 } from '@angular/material';
 
+// My modules
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -29,6 +30,8 @@ import { SettingsComponent } from './components/settings/settings.component';
 import { SoundcloudComponent } from './components/soundcloud/soundcloud.component';
 import { MixcloudComponent } from './components/mixcloud/mixcloud.component';
 import { ContentPlayerComponent } from './components/content-player/content-player.component';
+import { NavbarPlayerComponent } from './components/navbar-player/navbar-player.component';
+import { PlayerService } from './providers/player.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,8 @@ import { ContentPlayerComponent } from './components/content-player/content-play
     SettingsComponent,
     SoundcloudComponent,
     MixcloudComponent,
-    ContentPlayerComponent
+    ContentPlayerComponent,
+    NavbarPlayerComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +58,7 @@ import { ContentPlayerComponent } from './components/content-player/content-play
     MdGridListModule,
     MdListModule,
   ],
-  providers: [ElectronService],
+  providers: [ElectronService, PlayerService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
