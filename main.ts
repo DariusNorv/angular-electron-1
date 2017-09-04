@@ -6,8 +6,7 @@ const args = process.argv.slice(1);
 serve = args.some(val => val === '--serve');
 
 if (serve) {
-  require('electron-reload')(__dirname, {
-  });
+  require('electron-reload')(__dirname, {});
 }
 
 function createWindow(): void {
@@ -28,8 +27,11 @@ function createWindow(): void {
 
   // Open the DevTools.
   if (serve) {
+    // const extension = '/Users/kostya.v/Library/Application\\ Support/Google/' +
+    //   'Chrome/Default/Extensions/elgalmkoelokbchhkhacckoklkejnhcd/1.14.0_0';
+    // BrowserWindow
+    //   .addDevToolsExtension(path.resolve(extension));
     win.webContents.openDevTools();
-    // win.webContents.addDevToolsExtension('~/Library/Application\\ Support/Google/Chrome/Default/Extensions/');
   }
 
   // Emitted when the window is closed.
