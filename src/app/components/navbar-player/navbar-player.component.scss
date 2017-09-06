@@ -1,0 +1,23 @@
+audio {
+  display: none;
+}
+
+$white: #fff;
+
+.audio-player {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .controls {
+
+    > * {
+      display: block;
+    }
+
+    &-loading {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

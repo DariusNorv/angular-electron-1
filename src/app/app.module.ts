@@ -18,21 +18,25 @@ import {
   MdMenuModule,
   MdIconModule,
   MdButtonModule,
-  MdToolbarModule
+  MdToolbarModule,
+  MdProgressSpinnerModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { NavbarPlayerComponent} from './components/navbar-player/navbar-player.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { SoundcloudComponent } from './components/soundcloud/soundcloud.component';
 import { HeartthisComponent } from './components/heartthis/heartthis.component';
+import { PlayerService } from './providers/player.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
+    NavbarPlayerComponent,
     SettingsComponent,
     SoundcloudComponent,
     HeartthisComponent,
@@ -49,8 +53,9 @@ import { HeartthisComponent } from './components/heartthis/heartthis.component';
     MdMenuModule,
     MdCardModule,
     MdGridListModule,
+    MdProgressSpinnerModule,
   ],
-  providers: [ElectronService],
+  providers: [ElectronService, PlayerService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
