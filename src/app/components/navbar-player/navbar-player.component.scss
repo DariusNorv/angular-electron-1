@@ -10,14 +10,20 @@ $white: #fff;
   justify-content: space-around;
 
   .controls {
+    @extend .audio-player;
 
     > * {
-      display: block;
+      display: flex;
+      text-align: center;
     }
 
     &-loading {
       width: 24px;
       height: 24px;
+    }
+
+    &-timeupdate {
+      width: 150px;
     }
   }
 }

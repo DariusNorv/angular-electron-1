@@ -1,34 +1,42 @@
 <audio [src]="stream" controls #navbarAudioPlayer></audio>
 <div class="audio-player">
-  <div class="controls">
 
-    <button
-      *ngIf="status === 'paused'"
-      class="controls-play"
-      (click)="play()"
-      md-icon-button>
+  <section class="controls">
+
+    <button class="controls-play"
+            *ngIf="status === 'paused'"
+            (click)="play()"
+            md-icon-button>
       <md-icon class="md-24"
                aria-label="Play"
                svgIcon="play"></md-icon>
     </button>
 
-    <button
-      *ngIf="status === 'playing'"
-      class="pause"
-      (click)="pause()"
-      md-icon-button>
+    <button class="controls-pause"
+            *ngIf="status === 'playing'"
+            (click)="pause()"
+            md-icon-button>
       <md-icon class="md-24"
                aria-label="Pause"
                svgIcon="pause"></md-icon>
     </button>
 
-    <md-progress-spinner
-      *ngIf="status === 'loading'"
-      class="controls-loading"
-      mode="indeterminate"
-      color="warn"
-      aria-label="loading">
+    <md-progress-spinner class="controls-loading"
+                         *ngIf="status === 'loading'"
+                         mode="indeterminate"
+                         color="warn"
+                         aria-label="loading">
     </md-progress-spinner>
 
-  </div>
+    <md-slider class="controls-timeupdate"
+               [min]="timeUpdate.start"
+               [max]="timeUpdate.duration"
+               [step]="timeUpdate.step"
+               [value]="timeUpdate.current"
+               [thumb-label]="true"
+               ([displayValue])="showThumbs()"
+               (change)="seek($event)">
+    </md-slider>
+
+  </section>
 </div>
