@@ -3,6 +3,7 @@ interface ProviderModel {
   title: string;
   url: string;
   api?: string;
+  client_id?: string;
 }
 
 export const PROVIDERS: ProviderModel[] = [
@@ -16,6 +17,7 @@ export const PROVIDERS: ProviderModel[] = [
     id: 2,
     title: 'SoundCloud',
     url: 'soundcloud',
-    api: 'SoundcloudComponent',
+    api: 'https://api.soundcloud.com/',
+    client_id: 'bd6e76466be344a1d89fd254acf50498',
   },
 ];

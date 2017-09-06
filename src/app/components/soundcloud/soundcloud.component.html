@@ -4,3 +4,21 @@
   <app-content-player></app-content-player>
 </div>
 -->
+<div class="container flex">
+  <div class="sidebar">
+    <md-list>
+      <md-list-item
+        *ngFor="let item of sidebar; index as i;">
+        <button
+          md-button
+          class="selector">
+          {{ item.name }}
+        </button>
+      </md-list-item>
+    </md-list>
+  </div>
+  <div class="content">
+    <audio src="https://api.soundcloud.com/tracks/65576692/stream?client_id=bd6e76466be344a1d89fd254acf50498" controls></audio>
+  </div>
+</div>
+

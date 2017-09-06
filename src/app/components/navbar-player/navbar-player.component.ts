@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { PlayerService } from '../../providers/player.service';
 import { DomSanitizer } from '@angular/platform-browser';
-import { isDefined } from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-navbar-player',
