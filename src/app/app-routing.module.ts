@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { SoundcloudComponent } from './components/soundcloud/soundcloud.component';
-import { MixcloudComponent } from './components/mixcloud/mixcloud.component';
+import { HeartthisComponent } from './components/heartthis/heartthis.component';
 
 const routes: Routes = [
   {
@@ -20,8 +20,8 @@ const routes: Routes = [
     component: SoundcloudComponent,
   },
   {
-    path: 'mixcloud',
-    component: MixcloudComponent,
+    path: 'heartthis',
+    component: HeartthisComponent,
   }
 ];
 

@@ -26,7 +26,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { SoundcloudComponent } from './components/soundcloud/soundcloud.component';
-import { MixcloudComponent } from './components/mixcloud/mixcloud.component';
+import { HeartthisComponent } from './components/heartthis/heartthis.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +35,7 @@ import { MixcloudComponent } from './components/mixcloud/mixcloud.component';
     NavbarComponent,
     SettingsComponent,
     SoundcloudComponent,
-    MixcloudComponent
+    HeartthisComponent,
   ],
   imports: [
     BrowserModule,

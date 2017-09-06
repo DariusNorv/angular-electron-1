@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MixcloudComponent } from './mixcloud.component';
+import { NavbarPlayerComponent } from './navbar-player.component';
 
-describe('MixcloudComponent', () => {
-  let component: MixcloudComponent;
-  let fixture: ComponentFixture<MixcloudComponent>;
+describe('NavbarPlayerComponent', () => {
+  let component: NavbarPlayerComponent;
+  let fixture: ComponentFixture<NavbarPlayerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MixcloudComponent ]
+      declarations: [ NavbarPlayerComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MixcloudComponent);
+    fixture = TestBed.createComponent(NavbarPlayerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

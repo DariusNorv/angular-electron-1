@@ -10,12 +10,12 @@ export const PROVIDERS: ProviderModel[] = [
     id: 1,
     title: 'SoundCloud',
     url: 'soundcloud',
-    api: 'SoundcloudComponent',
+    api: 'https://api.soundcloud.com/?client_id=bd6e76466be344a1d89fd254acf50498',
   },
   {
     id: 2,
-    title: 'Mixcloud',
-    url: 'mixcloud',
-    api: 'MixcloudComponent',
+    title: 'HeartThis',
+    url: 'heartthis',
+    api: 'https://api-v2.hearthis.at/',
   },
 ];
