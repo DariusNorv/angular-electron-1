@@ -1,0 +1,9 @@
+@import "../../styles/reset";
+
+.flex-spacer {
+  flex-grow: 1;
+}
+.logo {
+  padding-right: 1em;
+  @extend %resetLink;
+}

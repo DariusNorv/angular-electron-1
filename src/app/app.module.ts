@@ -6,25 +6,52 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
-
 import { AppRoutingModule } from './app-routing.module';
 
 import { ElectronService } from './providers/electron.service';
 
+// Material
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  MdGridListModule,
+  MdCardModule,
+  MdMenuModule,
+  MdIconModule,
+  MdButtonModule,
+  MdToolbarModule
+} from '@angular/material';
+
+import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { SettingsComponent } from './components/settings/settings.component';
+import { SoundcloudComponent } from './components/soundcloud/soundcloud.component';
+import { HeartthisComponent } from './components/heartthis/heartthis.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    NavbarComponent,
+    SettingsComponent,
+    SoundcloudComponent,
+    HeartthisComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MdToolbarModule,
+    MdButtonModule,
+    MdIconModule,
+    MdMenuModule,
+    MdCardModule,
+    MdGridListModule,
   ],
   providers: [ElectronService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
