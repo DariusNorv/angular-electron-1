@@ -1,0 +1,29 @@
+<md-card class="player">
+  <md-grid-list cols="10">
+
+    <md-grid-tile [colspan]="1" class="oversize">
+      <div class="cover">
+        <img [src]="img"
+             onError="this.src = noImage"
+             class="img">
+        <button md-icon-button
+                class="play"
+                (click)="play(key)"
+                [hidden]="true">
+          <md-icon svgIcon="play"></md-icon>
+        </button>
+      </div>
+    </md-grid-tile>
+
+    <md-grid-tile [colspan]="8" [rowspan]="1" class="mix">
+      <div class="description">
+        <h1 class="title">{{title}}</h1>
+        <h2 class="username">by {{user}}</h2>
+      </div>
+      <!--<iframe [src]="iframeUrl()" frameborder="0" class="mixcloud-iframe" [id]="iframeId()"></iframe>-->
+    </md-grid-tile>
+
+    <md-grid-tile [colspan]="1"></md-grid-tile>
+
+  </md-grid-list>
+</md-card>

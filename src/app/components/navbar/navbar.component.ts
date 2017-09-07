@@ -12,7 +12,7 @@ import { PROVIDERS } from '../../shared/providers';
 export class NavbarComponent implements OnInit {
 
   providers = PROVIDERS;
-  show: boolean = false;
+  show = false;
 
   constructor(iconRegistry: MdIconRegistry, sanitizer: DomSanitizer) {
     iconRegistry

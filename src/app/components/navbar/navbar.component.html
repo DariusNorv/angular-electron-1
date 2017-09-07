@@ -2,13 +2,17 @@
   <!--Logo-->
   <md-icon svgIcon="logo" class="logo" routerLink=""></md-icon>
   <!--Music services-->
-  <a *ngFor="let provider of providers"
+  <a *ngFor="let provider of providers; trackBy: id"
      md-button
      routerLink="{{ provider.url }}">
     {{ provider.title | uppercase }}
   </a>
   <!--Separator-->
   <div class="flex-spacer"></div>
+
+  <div>
+    <app-navbar-player></app-navbar-player>
+  </div>
 
   <!--Settings-->
   <button md-icon-button [mdMenuTriggerFor]="settings" *ngIf="show">
